@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sting Gold Pro — Dashboard</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.2.0/chartjs-plugin-datalabels.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+</head>
+<body>
+<header>
+  <h1>DASHBOARD ACTIVATION — STING GOLD PRO NATIONWIDE</h1>
+  <div class="sub">Dữ liệu đồng bộ trực tiếp từ Google Sheet — mọi người mở link đều thấy số liệu mới nhất</div>
+</header>
+
+<div class="toolbar">
+  <div class="tabs">
+    <button id="tab-dashboard" class="tab-btn active">Dashboard</button>
+    <button id="tab-summary" class="tab-btn">Summary</button>
+    <button id="tab-general" class="tab-btn">General Report</button>
+  </div>
+  <div class="upload-area">
+    <button id="refreshGsBtn">🔄 Làm mới từ Google Sheet</button>
+  </div>
+</div>
+
+<div class="meta-bar">
+  <span id="sourceLabel">Nguồn: dữ liệu mặc định</span>
+  <span>Số dòng dữ liệu: <b id="rowCount">0</b></span>
+  <span>Cập nhật lúc: <span id="lastUpdated">—</span></span>
+</div>
+
+<main>
+  <div id="view-dashboard" class="tab-view active"></div>
+  <div id="view-summary" class="tab-view"></div>
+  <div id="view-general" class="tab-view"></div>
+</main>
+
+<script src="data_block.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
